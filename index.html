@@ -9,18 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
  <style>
  
-.shad:hover{
+/* .shad:hover{
   -webkit-box-shadow: 0 -0.5px 32px 4.5px #f3e80b;
 -moz-box-shadow: 0 -0.5px 32px 4.5px #f3e80b;
 box-shadow: 0 -0.5px 32px 4.5px #f3e80b;
 
 
 
-}
+} */
 .Box:hover{
  
 -webkit-box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
@@ -36,58 +37,110 @@ box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
             border-bottom: 12px solid transparent;
             margin-left: 5px;
         } */
-
+@keyframes half-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* smaller height = half bounce */
+  }
+}
 
 
  </style>
 </head>
   <body >
   
-    <nav class="h-[120px] w-[100%] z-4 fixed absolute flex items-center justify-between overflow-x-hidden">
-      <div class="h-full w-[10%]  flex items-center justify-center"><img  class="h-[90px] z-2" src="./Assets/logo.svg" alt=""></div>
+    <nav class="h-[100px] md:h-[120px] w-[100%] z-4 fixed absolute flex items-center justify-between overflow-x-hidden">
+      <div class="h-full w-[10%] flex items-center justify-center"><img  class="h-[90px] z-2" src="./Assets/logo.svg" alt=""></div>
       <div class="h-full w-[64.5%] flex items-center justify-between">
-      <div class="h-[35%] w-[44%] bg-black rounded-3xl shadow-lg shadow-white" style="box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
+      <div class=" md:h-[35%] md:w-[44%] bg-black rounded-3xl shadow-lg shadow-white" style="box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
 -webkit-box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
 -moz-box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);">
-      <ul class="flex items-center justify-center  gap-9 mt-[7px]" >
-        <li class="text-[#7B7B7B] font-black tracking-[-1.5px] text-[18px]">WATCH</li>
-      <li  class="text-[#7B7B7B] font-black tracking-[-1.5px] text-[18px]">ABOUT US</li>
-      <li  class="text-[#7B7B7B] font-black tracking-[-1.5px] text-[18px]">CONTACT US</li></ul>
+      <ul class="hidden md:flex items-center justify-center gap-6  md:gap-9 mt-[7px] cursor-pointer transition-transform duration-900" >
+      <li class="text-[#7B7B7B] font-black tracking-[-1.5px] text-[18px] cursor-pointer hover:text-[#FFE600]">WATCH</li>
+      <li  class="text-[#7B7B7B] font-black tracking-[-1.5px] text-[18px] cursor-pointer hover:text-[#FFE600]">ABOUT US</li>
+      <li  class="text-[#7B7B7B] font-black tracking-[-1.5px] text-[18px] cursor-pointer hover:text-[#FFE600]">CONTACT US</li></ul>
       </div>   
-      <div class="h-[45%] w-[43%] rounded-4xl flex mr-[20px]">
-        <div id="card" class="border h-full w-[50%] rounded-l-4xl  flex items-center justify-center bg-[#03EF00] overflow-hidden  transition-transform duration-500  after:content-[''] after:position-absolute after:inset-0 after:bg-[rgba(0, 0, 0, 0.3)] after:z-1"><p id="cardText" class="font-black tracking-[-1.5px] text-[18px] z-2">SUPPORT US </p> <img id="cardImage" class="transition-transform duration-500 h-[27px] ml-[7px]" src="./Assets/Image1.png" alt=""></div>
-         <div id="plusBox" class=" border h-full w-[50%] rounded-r-4xl font-black tracking-[-1.5px] text-[18px] flex items-center justify-center bg-[#FFF600] hover:w-[55%] transition-transform duration-500 hover:bg-white">
+      <div class="hidden md:h-[45%] md:w-[43%] rounded-4xl md:flex mr-[20px]">
+        <div id="card" class="border cursor-pointer h-full w-[50%] rounded-l-4xl  flex items-center justify-center bg-[#03EF00] overflow-hidden  transition-transform duration-500  after:content-[''] after:position-absolute after:inset-0 after:bg-[rgba(0, 0, 0, 0.3)] after:z-1"><p id="cardText" class="font-black tracking-[-1.5px] text-[18px] cursor-pointer z-2">SUPPORT US </p> <img id="cardImage" class="transition-transform duration-500 h-[27px] ml-[7px]" src="./Assets/Image1.png" alt=""></div>
+         <div id="plusBox" class="cursor-pointer border h-full w-[50%] rounded-r-4xl font-black tracking-[-1.5px] text-[18px] flex items-center justify-center bg-[#FFF600] hover:w-[55%] transition-transform duration-500 hover:bg-white">
           SUBSCRIBE <i id="plusIcon"  class="fa-solid fa-plus font-black ml-[5px] transition-transform duration-500 hover:rotate-340"></i></div>
       </div>
     </div>
+
+     <div class="md:hidden z-4 mr-5 bg-[#FFF600] flex items-center justify-end p-3 border rounded-full">
+    <button id="menu-btn" class="text-black text-4xl focus:outline-none">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
     </nav>
+
+    <!-- //// -->
+     <div id="mobileMenu" class="fixed inset-0 bg-[#FFF600] z-30 hidden flex-col items-center justify-start pt-4 px-6 transition-all duration-500">
+  <div class="flex justify-between items-center w-full mb-8">
+    <img src="./Assets/logo.svg" alt="Logo" class="h-[60px]" />
+    <h1 class="text-black text-xl font-black">MENU</h1>
+    <button id="closeMenu" class="bg-[#FF4500] text-black text-4xl rounded-full border p-3 flex items-center justify-center">
+    <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Support/Subscribe buttons -->
+  <div class="w-full flex justify-center items-center mt-26 border rounded-full overflow-hidden">
+    <div id="card2" class="w-1/2 bg-[#03EF00] border flex items-center justify-center py-4 font-black text-black text-[20px] tracking-tighter">
+      <p id="cardText2">SUPPORT US</p> <img id="cardImage2" src="./Assets/Image1.png" class="h-[30px] ml-2 transition-transform duration-500" alt="">
+    </div>
+    <div id="plusBox2" class="w-1/2 border bg-transparent flex items-center justify-center py-4 font-black text-black text-[20px]">
+      SUBSCRIBE <i id="plusIcon2" class="fa-solid fa-plus ml-2 transition-transform duration-500 hover:rotate-340"></i>
+    </div>
+  </div>
+
+  <!-- Navigation Links -->
+  <div class="flex flex-col items-start justify-center mt-10 space-y-8 text-black font-extrabold text-4xl tracking-tighter cursor-pointer">
+    <a href="#" class="hover:text-[#03EF00] transition-transform duration-[4000ms] ease-in-out">WATCH</a>
+    <a href="#" class="hover:text-[#03EF00] transition-transform duration-[4000ms] ease-in-out">ABOUT US</a>
+    <a href="#" class="hover:text-[#03EF00] transition-transform duration-[4000ms] ease-in-out">CONTACT US</a>
+  </div>
+
+  <!-- Gorilla Image -->
+  <div class="absolute rotate-15 top-60 left-60 w-[82%] opacity-90">
+    <img src="./Assets/Image1.png" alt="Gorilla" class="w-full object-contain" />
+  </div>
+</div>
+
+
+    <!-- ========= -->
      <div class="h-[100vh] w-full ">
         <video class="relative fixed top-0 left-0 w-screen h-screen object-cover" autoplay muted loop playsinline src="./Assets/hero.mp4">
          
         </video>
-         <img class="absolute top-33 left-100 h-[500px] animate-tilt" src="./Assets/detective-man.png" alt="">
-         <img class="absolute top-33 right-117 h-[230px] w-[90px] " src="./Assets/plug-416x1024.png" alt="">
+         <img class="absolute top-30 h-[400px]  left-25 md:left-110 h-[600px] animate-tilt" src="./Assets/detective-man.png" alt="">
+         <img class="absolute top-33 right-45 h-[165px] w-[70px] md:right-128 md:h-[230px] md:w-[90px] " src="./Assets/plug-416x1024.png" alt="">
 
-         <img class="absolute top-17 left-115 h-[300px] w-[350px]" src="./Assets/unplug (1).svg" alt="">
-         <img class="absolute bottom-27 left-135 h-[150px] w-[150px] animate-[bounce_4s_infinite] shad rounded-full transition-transform duration-300" src="./Assets/gorilla-disc.svg" alt="">   
+         <img class="absolute top-29 md:top-17 left-55 md:left-130 h-[170px] w-[270px] md:h-[320px] md:w-[370px]" src="./Assets/unplug (1).svg" alt="">
+         <img class="absolute bottom-27 left-75 md:left-160 h-[165px] w-[165px] animate-[bounce_4s_infinite]  shadow-[0_-0.5px_32px_4.5px_#f3e80b] md:shadow-none md:hover:shadow-[0_-0.5px_32px_4.5px_#f3e80b] shad rounded-full transition-transform duration-300" src="./Assets/gorilla-disc.svg" alt="">   
      </div>
 
 
-     <div class="h-[75vh] w-full relative overflow-hidden">
-      <img src="./Assets/moon.png" class="object-cover" alt="">
-      <div class="absolute inset-0 bg-black/50"></div>
-      <img class="absolute top-9 left-110 " src="./Assets/astronaut.png" alt="">
-      <img class="absolute top-15 left-10 rotate-[10deg] h-[65px] animate-[bounce_4s_infinite]" src="./Assets/rocket.png" alt="">
-      <div class="absolute top-30 left-30 h-[50%] w-[85%] flex items-center justify-center flex-col">
-        <h1 class="text-white flex text-5xl font-black tracking-tighter uppercase ">The Message they want to silence.</h1>
-        <h1 class="text-white flex text-5xl font-black tracking-tighter uppercase "> <span class="text-[#21BF1F]">The Science </span><div class="relative rounded-full h-[50px] w-[50px]"> <img src="./Assets/statement-science.avif" class="rounded-full h-[50px] w-[50px] relative" alt=""><div class="absolute h-[50px] w-[50px] rounded-full inset-0 bg-[color:#21BF1F]/50"></div> </div> they want to hide.</h1>
-        <h1 class="text-white flex text-5xl font-black tracking-tighter uppercase">From <span class="text-[#FFF600]">The Channel</span> <div class="relative rounded-full h-[50px] w-[50px]"> <img src="./Assets/statement-channel.avif" class="rounded-full h-[50px] w-[50px] relative" alt=""><div class="absolute h-[50px] w-[50px] rounded-full inset-0 bg-[color:#FFF600]/50"></div> </div> they’d like to <span class="text-[#FF4300]"> ban.</span></h1>
+     <div class="h-[65vh]  md:h-[75vh] w-full relative overflow-hidden flex items-center justify-center">
+      <img src="./Assets/moon.png" class="h-full w-full object-cover" alt="">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <img class="absolute left-40 top-14 md:top-9 md:left-120 md:h-[950px] h-[700px] animate-[half-bounce_4s_infinite_ease-in-out]" src="./Assets/astronaut.png" alt="">
+      <img class="absolute top-15 left-10 rotate-[10deg] h-[35px] md:h-[65px] animate-[bounce_3s_infinite]" src="./Assets/rocket.png" alt="">
+      <div class="absolute top-20  md:top-30 md:left-30 md:h-[50%] md:w-[85%] h-[80%] w-[97%]  flex items-center  justify-center  flex-col text-center">
+        <h1 class="text-white flex text-[42px] leading-12 md:text-[53px] font-black tracking-tighter uppercase">The Message they want to silence.</h1>
+        <h1 class="text-white flex text-[40px]   leading-12 md:text-[53px] font-black tracking-tighter uppercase flex   justify-center   md:text-5xl"> <span class="inline-block"> <span class="text-[#21BF1F] inline-flex ">The Science </span><span class="relative rounded-full md:h-[50px] md:w-[50px]  inline-flex ml-2 mt-1"> <img src="./Assets/statement-science.avif" class="rounded-full mt-1 h-[50px] w-[50px] relative " alt=""><span class="absolute h-[50px] w-[50px] rounded-full mt-1 inset-0 bg-[color:#21BF1F]/50 "></span> </span> <span class="">they want to hide.</span></span></h1>
+        <h1 class="text-white flex text-[40px]   leading-12 md:text-[53px] font-black tracking-tighter uppercase flex   justify-center   md:text-5xl"> <span class="inline-block"> <span class=" inline-flex ">From <span class="text-[#FFF600]"> The Channel</span> </span><span class="relative rounded-full md:h-[50px] md:w-[50px]  inline-flex ml-2 mt-1"> <img src="./Assets/statement-channel.avif" class="rounded-full mt-1 h-[50px] w-[50px] relative " alt=""><span class="absolute h-[50px] w-[50px] rounded-full mt-1 inset-0 bg-[color:#FFF600]/50"></span> </span> <span class="">they'd like to <span class="text-[#FF4300]">ban</span>.</span></span></h1>
+        
+        <!-- <h1 class="text-white flex  text-[40px] leading-12 md:text-[53px] font-black tracking-tighter uppercase">From <span class="text-[#FFF600]">The Channel</span> <div class="relative rounded-full h-[50px] w-[50px]"> <img src="./Assets/statement-channel.avif" class="rounded-full h-[50px] w-[50px] relative" alt=""><div class="absolute h-[50px] w-[50px] rounded-full inset-0 bg-[color:#FFF600]/50"></div> </div> they’d like to <span class="text-[#FF4300]"> ban.</span></h1> -->
         
       </div>
      </div>
-     <div class="h-[75vh] w-full bg-[#FFF600] relative leading-none overflow-hidden">
-      <h1 class="text-[300px] absolute top-[-20px] text-white font-black inline mt-[-50px]"> <marquee class="" behavior="scroll" direction="left" scrollamount="8" loop="infinite">
-    <span class="inline-block ">GORILLA SCIENCE</span>
+     <div class="md:h-[75vh] h-[48vh] w-full bg-[#FFF600] relative leading-none overflow-hidden overflow-x-hidden">
+    <h1 class="text-[300px]  absolute top-[-100px] md:top-[-20px] text-white font-black inline mt-[-50px]"> 
+    <marquee class="" behavior="scroll" direction="left" scrollamount="8" loop="infinite">
+    <span class="inline-block  ">GORILLA SCIENCE</span>
     <span class="inline-block mx-4 ">GORILLA SCIENCE</span>
     <span class="inline-block mx-4 ">GORILLA SCIENCE</span>
     <span class="inline-block mx-4 ">GORILLA SCIENCE</span>
@@ -95,7 +148,8 @@ box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
     
     </h1>
   
-     <h1 class="text-[300px] absolute bottom-[-70px] text-white font-black inline  mb-[20px]"> <marquee class="" behavior="scroll" direction="right" scrollamount="10" loop="infinite">
+     <h1 class="text-[300px] absolute bottom-[-150px] md:bottom-[-70px] text-white font-black inline  mb-[20px]">
+      <marquee class="" behavior="scroll" direction="right" scrollamount="10" loop="infinite">
     <span class="inline-block  ">GORILLA SCIENCE</span>
     <span class="inline-block mx-4 ">GORILLA SCIENCE</span>
     <span class="inline-block mx-4 ">GORILLA SCIENCE</span>
@@ -103,27 +157,27 @@ box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
     </marquee>
     </h1>
       
-      <img class="absolute top-11 left-110 h-[430px]" src="./Assets/robot-monkey.png" alt="">
-      <div class=" absolute top-7 left-27  w-[82%] border-t "></div>
+      <img class="absolute top-11 md:left-120 left-53 md:h-[490px] h-[300px]" src="./Assets/robot-monkey.png" alt="">
+      <div class=" absolute top-7 md:left-27 left-18  md:w-[82%] w-[77%] border-t "></div>
       <div class="absolute left-5 top-5  font-black text-md tracking-tighter"> THINK</div>
       <div class="absolute right-5 top-5  font-black text-md tracking-tighter"> DISCOVER</div>
-      <div class=" absolute top-13 left-5 h-[80%]  border-l "></div>
-      <div class="absolute left-5 top-110  font-black text-md tracking-tighter"> REBEL</div>
-      <div class=" absolute bottom-7 left-27  w-[82%] border-b "></div>
-      <img class="absolute bottom-5 right-5 h-7" src="./Assets/bananas.svg" alt="">
-      <div class=" absolute top-13 right-5 h-[80%]  border-r "></div>
+      <div class=" absolute top-13 left-5 md:h-[80%] h-[75%]  border-l "></div>
+      <div class="absolute left-5 md:top-120 top-77  font-black text-md tracking-tighter"> REBEL</div>
+      <div class=" absolute md:bottom-7 bottom-5 md:left-27 left-20  w-[82%] border-b "></div>
+      <img class="absolute md:bottom-5 bottom-3 md:right-5 right-3 md:h-7 h-10" src="./Assets/bananas.svg" alt="">
+      <div class=" absolute top-13 right-5 md:h-[80%] h-[73%] border-r "></div>
 
 
-      <div class="absolute h-[50%] w-[30%] top-38 left-23 text-center leading-none" ><h1 class="font-extrabold text-sm leading-none " data-aos-delay="200" data-aos="zoom-in-down">LOOKING<br><span class="text-4xl" data-aos="zoom-in-down">FOR</span><br> <span class="text-6xl" data-aos="zoom-in-down">MORE</span> <br><span class="text-7xl">SCIENCE?</span></h1></div>
-      <div class="absolute h-[50%] w-[30%] top-38 right-23 text-center leading-none" ><h1 class="font-extrabold text-sm text-[#21BF1F] leading-none" data-aos-delay="200" data-aos="zoom-in-down">BECOME<br><span class="text-4xl" data-aos="zoom-in-down">A</span><br> <span class="text-6xl" data-aos="zoom-in-down">GORILLA</span> <br><span class="text-7xl">TODAY</span></h1></div>
+      <div class="absolute h-[55%] w-[35%] md:top-33 top-20 md:left-15 left-4 text-center" ><h1 class="font-extrabold md:text-md text-sm leading-0 " data-aos-delay="200" data-aos="zoom-in-down">LOOKING<br><span class="md:text-5xl text-4xl" data-aos="zoom-in-down">FOR</span><br> <span class="md:text-7xl text-6xl" data-aos="zoom-in-down">MORE</span> <br><span class="md:text-8xl text-7xl">SCIENCE?</span></h1></div>
+      <div class="absolute h-[50%] w-[30%] md:top-33 top-17 md:right-23 right-18 text-center" ><h1 class="font-extrabold md:text-md text-sm text-[#21BF1F] leading-none" data-aos-delay="200" data-aos="zoom-in-down">BECOME<br><span class="md:text-5xl text-4xl" data-aos="zoom-in-down">A</span><br> <span class="md:text-7xl text-6xl" data-aos="zoom-in-down">GORILLA</span> <br><span class="md:text-8xl text-7xl">TODAY</span></h1></div>
       
-      <div  class="Box bg-[#FFF600] font-black text-lg absolute bottom-21 left-135 px-7 py-3 border rounded-4xl cursor-pointer tracking-tighter">CONTACT US<i   class="Icon fa-solid fa-plus font-black ml-[5px] transition-transform duration-500 hover:rotate-340"></i></div>
+      <div  class="Box bg-[#FFF600] font-black text-lg absolute md:bottom-21 bottom-5 md:left-150 left-64 px-8 py-4 border rounded-4xl cursor-pointer tracking-tighter">CONTACT US<i   class="Icon fa-solid fa-plus font-black ml-[5px] transition-transform duration-500 hover:rotate-340"></i></div>
 
       
      </div>
 
      <div class="h-[110vh] w-full bg-black relative overflow-hidden">
-      <h1 class="text-[450px] absolute top-[-120px] tracking-tighter font-black inline mt-[-90px] "> <marquee class="" behavior="scroll" direction="left" scrollamount="10" loop="infinite">
+      <h1 class="md:text-[450px] text-[270px] absolute md:top-[-120px] top-[-50px] tracking-tighter font-black inline mt-[-90px] "> <marquee class="" behavior="scroll" direction="left" scrollamount="10" loop="infinite">
     <span class="inline-block text-[#1F1F1F] ">PICKS GORILLA</span>
     <span class="inline-block mx-4 text-[#1F1F1F]">PICKS GORILLA </span>
     <span class="inline-block mx-4 text-[#1F1F1F]">PICKS GORILLA</span>
@@ -131,68 +185,68 @@ box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
     </marquee>
     </h1>
 
-    <div class="absolute top-12  h-[200px] w-[400px] uppercase text-5xl left-5 font-black tacking-tighter text-white"> <span class="text-[#FFF600]">Gorilla’s </span> Top Picks</div>
+    <div class="absolute top-12  md:h-[200px] md:w-[400px] h-[150px] w-[260px] uppercase md:text-5xl text-4xl left-5 font-black tacking-tighter text-white"> <span class="text-[#FFF600]">Gorilla’s </span> Top Picks</div>
 
     <!-- SWiper -->
      <swiper-container class="p-5 h-[470px] w-full mt-57 " pagination="true" pagination-clickable="true" slides-per-view="4"
     space-between="25" free-mode="true">
-    <swiper-slide class="h-full   flex flex-col">
+    <swiper-slide class="h-full swiper   flex flex-col">
       <div class="h-[40%] w-full ">
         <img class="h-full w-full object-cover" src="./Assets/swiper1.jpg" alt="">
       </div>
-      <div class="h-[60%] w-full  flex flex-col justify-between">
-        <h1 class="tracking-tighter text-lg font-black text-white ml-5 mt-3">WHO RUNS THE <span class="text-[#FFE600]">WORLD?</span> |<br> NEW CLASS</h1>
+      <div class="h-[60%] belowDiv w-full  flex flex-col justify-between">
+        <h1 class="tracking-tighter text-xl font-black text-white ml-5 mt-3">WHO RUNS THE <span class="green text-[#FFE600]">WORLD?</span> |<br> NEW CLASS</h1>
       <div class="card-footer flex justify-between absolute bottom-[5px] items-center">
                                 <span class="card-date mb-2 ml-5 text-[14px] text-[#999]" style="font-family: 'Roboto Condensed', sans-serif;">09.07.2025</span>
-                                <div class="card-arrow w-[35px] h-[35px] mb-2 bg-[#FFE600] rounded-full flex items-center justify-center text-[18px] font-bold text-black relative left-[150px]">→</div>
+                                <div class="card-arrow w-[35px] h-[35px] mb-2 bg-[#FFE600] rounded-full flex items-center justify-center text-[18px] font-bold text-black relative left-[150px] arrow">→</div>
        </div>
       </div>
     </swiper-slide>
-     <swiper-slide class="h-full   flex flex-col">
+     <swiper-slide class="h-full swiper  flex flex-col">
       <div class="h-[40%] w-full ">
         <img class="h-full w-full object-cover" src="./Assets/swiper2.jpg" alt="">
       </div>
-      <div class="h-[60%] w-full  flex flex-col justify-between">
-        <h1 class="tracking-tighter text-lg font-black text-white ml-5 mt-3">WHO RUNS THE <span class="text-[#FFE600]">WORLD?</span> |<br> NEW CLASS</h1>
+      <div class="h-[60%] belowDiv w-full  flex flex-col justify-between">
+        <h1 class="tracking-tighter text-xl font-black text-white ml-5 mt-3">THE GRAPH <span class="green text-[#FFE600]">LIED</span> | TOM'S<br> TRUTH BOMB</h1>
       <div class="card-footer flex justify-between absolute bottom-[5px] items-center">
                                 <span class="card-date mb-2 ml-5 text-[14px] text-[#999]" style="font-family: 'Roboto Condensed', sans-serif;">09.07.2025</span>
-                                <div class="card-arrow w-[35px] h-[35px] mb-2 bg-[#FFE600] rounded-full flex items-center justify-center text-[18px] font-bold text-black relative left-[150px]">→</div>
+                                <div class="card-arrow w-[35px] h-[35px] mb-2 bg-[#FFE600] rounded-full flex items-center justify-center text-[18px] font-bold text-black relative left-[150px] arrow">→</div>
        </div>
       </div>
     </swiper-slide>
-     <swiper-slide class="h-full  flex flex-col">
+     <swiper-slide class="h-full swiper flex flex-col">
       <div class="h-[40%] w-full ">
         <img class="h-full w-full object-cover" src="./Assets/swiper3.jpg" alt="">
       </div>
-      <div class="h-[60%] w-full flex flex-col justify-between">
-        <h1 class="tracking-tighter text-lg font-black text-white ml-5 mt-3">WHO RUNS THE <span class="text-[#FFE600]">WORLD?</span> |<br> NEW CLASS</h1>
+      <div class="h-[60%] belowDiv w-full flex flex-col justify-between">
+        <h1 class="tracking-tighter text-xl font-black text-white ml-5 mt-3">(LITTLE) ICE AGE | <span class="green text-[#FFE600]">DR WILLIE<br> SOON</span>  :TIME TRAVELLER</h1>
       <div class="card-footer flex justify-between absolute bottom-[5px] items-center">
                                 <span class="card-date mb-2 ml-5 text-[14px] text-[#999]" style="font-family: 'Roboto Condensed', sans-serif;">09.07.2025</span>
-                                <div class="card-arrow w-[35px] h-[35px] mb-2 bg-[#FFE600] rounded-full flex items-center justify-center text-[18px] font-bold text-black relative left-[150px]">→</div>
+                                <div class="card-arrow w-[35px] h-[35px] mb-2 bg-[#FFE600] rounded-full flex items-center justify-center text-[18px] font-bold text-black relative left-[150px] arrow">→</div>
        </div>
       </div>
     </swiper-slide>
-     <swiper-slide class="h-full  flex flex-col">
+     <swiper-slide class="h-full swiper flex flex-col">
       <div class="h-[40%] w-full ">
         <img class="h-full w-full object-cover" src="./Assets/swiper4.jpg" alt="">
       </div>
-      <div class="h-[60%] w-full  flex flex-col justify-between">
-        <h1 class="tracking-tighter text-lg font-black text-white ml-5 mt-3">WHO RUNS THE <span class="text-[#FFE600]">WORLD?</span> |<br> NEW CLASS</h1>
+      <div class="h-[60%] belowDiv w-full  flex flex-col justify-between">
+        <h1 class="tracking-tighter text-xl font-black text-white ml-5 mt-3">THE NEW ECO LAW READY TO TAKE AWAY YOUR <span class="green text-[#FFE600]"><br>FREEDOM</span> |THE CLIMATE AND NATURE BILL</h1>
       <div class="card-footer flex justify-between absolute bottom-[5px] items-center">
                                 <span class="card-date mb-2 ml-5 text-[14px] text-[#999]" style="font-family: 'Roboto Condensed', sans-serif;">17.01.2025</span>
-                                <div class="card-arrow w-[35px] h-[35px] mb-2 bg-[#FFE600] rounded-full flex items-center justify-center text-[18px] font-bold text-black relative left-[150px]">→</div>
+                                <div class="card-arrow w-[35px] h-[35px] mb-2 bg-[#FFE600] rounded-full flex items-center justify-center text-[18px] font-bold text-black relative left-[150px] arrow">→</div>
        </div>
       </div>
     </swiper-slide>
-     <swiper-slide class="h-full  flex flex-col">
+     <swiper-slide class="h-full swiper flex flex-col">
       <div class="h-[40%] w-full ">
         <img class="h-full w-full object-cover" src="./Assets/swiper5.jpg" alt="">
       </div>
-      <div class="h-[60%] w-full  flex flex-col justify-between">
-        <h1 class="tracking-tighter text-lg font-black text-white ml-5 mt-3">WHO RUNS THE <span class="text-[#FFE600]">WORLD?</span> |<br> NEW CLASS</h1>
+      <div class="h-[60%] w-full belowDiv  flex flex-col justify-between">
+        <h1 class="tracking-tighter text-xl font-black text-white ml-5 mt-3">TOP 10 CELEBRITY CLIMATE <span class="green text-[#FFE600]">HYPOCRITES</span></h1>
       <div class="card-footer flex justify-between absolute bottom-[5px] items-center">
                                 <span class="card-date mb-2 ml-5 text-[14px] text-[#999]" style="font-family: 'Roboto Condensed', sans-serif;">10.12.2024</span>
-                                <div class="card-arrow w-[35px] h-[35px] mb-2 bg-[#FFE600] rounded-full flex items-center justify-center text-[18px] font-bold text-black relative left-[150px]">→</div>
+                                <div class="card-arrow w-[35px] h-[35px] mb-2 bg-[#FFE600] rounded-full flex items-center justify-center text-[18px] font-bold text-black relative left-[150px] arrow">→</div>
        </div>
       </div>
     </swiper-slide>
@@ -203,48 +257,50 @@ box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
       
      </div>
 
-    <div class="h-[115vh] w-[full] relative">
+    <div class="md:h-[115vh] h-[65vh] md:w-[full] w-full relative">
       <video autoplay muted loop playsinline class=" object-cover h-full w-full"  src="./Assets/donate-bg.mp4"></video>
-      <div class="absolute inset-0 bg-black/80 h-[120vh] w-full"></div>
-      <div class="absolute  top-15 left-105 h-[350px] w-[400px] flex flex-col items-center justify-between">
-        <img class="h-[175px]" src="./Assets/donate-heading.png" alt="">
+      <div class="absolute inset-0 bg-black/60 h-[120vh] w-full"></div>
+      <div class="absolute  md:top-15 top-12 md:left-115 left-35 md:h-[370px] md:w-[400px] h-[390px] w-[440px] flex flex-col items-center justify-between">
+        <img class="md:h-[175px]" src="./Assets/donate-heading.png" alt="">
         <h1 class="uppercase tracking-tighter text-lg text-white  text-center" style="font-family: 'Roboto Condensed', sans-serif;">Please help us expand and grow gorilla science… Because freedom’s worth fighting for.</h1>
-       <div  class="Box bg-[#FFF600] font-black text-lg w-[200px]  text-center py-3 border rounded-4xl tracking-tighter">SUPPORT US<i  class="Icon fa-solid fa-plus font-black ml-[5px] transition-transform duration-500 hover:rotate-340"></i></div>
+       <div  class="Box bg-[#FFF600] font-black text-lg w-[210px]  text-center py-4  border rounded-4xl tracking-tighter cursor-pointer">SUPPORT US<i  class="Icon fa-solid fa-plus font-black ml-[5px] transition-transform duration-500 hover:rotate-340"></i></div>
         
       </div>
-      <img class="absolute top-128 z-1 right-5 h-[510px] w-[610px] transition duration-700 ease-in-out" data-aos="zoom-out" data-aos-duration="20000"  src="./Assets/crowd-1024x929.jpg" alt="">
-       <div class="absolute z-1 top-150 left-29 h-[330px] w-[410px]  flex flex-col items-start justify-between">
-        <h1 class="text-5xl font-black tracking-tighter text-white uppercase leading-none">About <span class="text-[#FFF600]"><br>Gorilla<br> Science</span> </h1>
+      <img class="absolute top-128 z-1 right-5 md:h-[510px] md:w-[610px] h-[270px] w-[320px] transition duration-700 ease-in-out" data-aos="zoom-out" data-aos-duration="20000"  src="./Assets/crowd-1024x929.jpg" alt="">
+       <div class="absolute z-1 md:top-150 top-125 md:left-29 left-9 md:h-[330px] md:w-[410px] h-[350px] w-[250px]   flex flex-col items-start justify-between">
+        <h1 class="md:text-5xl text-4xl font-black tracking-tighter text-white uppercase leading-none">About <span class="text-[#FFF600]"><br>Gorilla<br> Science</span> </h1>
         <h1 class="uppercase tracking-tighter text-lg text-white  " style="font-family: 'Roboto Condensed', sans-serif;">Who are those crazy gorilla guys? What are they doing? Why won’t they stop?</h1>
-       <div  class="Box bg-[#FFF600] font-black text-lg w-[170px]  text-center py-3 border rounded-4xl tracking-tighter">ABOUT US<i class="Icon fa-solid fa-plus font-black ml-[5px] transition-transform duration-500 hover:rotate-340"></i></div>
+       <div  class="Box bg-[#FFF600] font-black text-lg w-[190px]  text-center py-4 border rounded-4xl tracking-tighter cursor-pointer">ABOUT US<i class="Icon fa-solid fa-plus font-black ml-[5px] transition-transform duration-500 hover:rotate-340"></i></div>
         
       </div>   
     </div>
 
 
     <div class="h-[55vh] relative w-full bg-black">
-      <img class="absolute z-1 bottom-5 left-5 h-8" src="./Assets/gorilla-disc-thumb.svg" alt="">
+      <img class="absolute z-1 bottom-1 left-5 h-8" src="./Assets/gorilla-disc-thumb.svg" alt="">
     </div>
 
-    <div class="h-[115vh] w-[full] relative">
-      <video class="object-cover h-full w-full" autoplay muted loop playsinline src="./Assets/footer.mp4"></video>
-       <div class="absolute inset-0 bg-black/20 h-[115vh] w-full"></div>
-      <img class="absolute top-2 h-50 left-115" src="./Assets/plug-416x1024.png" alt="">
-      <img class="absolute top-2 h-45 left-115" src="./Assets/unplug (1).svg" alt="">
+    <div class="md:h-[115vh] h-[80vh] w-[full] relative">
+      <video class="hidden md:block object-cover h-full w-full" autoplay muted loop playsinline src="./Assets/footer.mp4"></video>
+      <img   class="block md:hidden object-cover h-full w-full" src="./Assets/bg-noise (1).jpg" alt="">
+      <div class="absolute inset-0 bg-black/20 md:h-[115vh] h-[80vh] w-full"></div>
+      <img class="absolute md:top-2 top-10 md:h-50 h-45 md:left-115 left-50" src="./Assets/plug-416x1024.png" alt="">
+      <img class="absolute md:top-2 top-10 h-45 md:left-115 left-50" src="./Assets/unplug (1).svg" alt="">
       
-      <div class="h-[100px] w-full  absolute bottom-0 flex items-center justify-between">
-        <div class="h-full w-[40%] flex items-center justify-evenly">
-          <img class="h-9" src="./Assets/logo.svg" alt="">
-          <h1 class="text-white text-lg tracking-tighter uppercase" style="font-family: 'Roboto Condensed', sans-serif;">Copyright © 2024 <span class="text-[#FFF600]">Gorilla Science</span>. All Rights Reserved</h1>
+      <div class="h-[100px] w-full  absolute md:bottom-0 bottom-15 left-20 md:left-0 md:flex items-center justify-between ">
+        <div class="h-full md:w-[40%] w-[79%] flex items-center justify-evenly">
+          <img class="md:h-9 h-12" src="./Assets/logo.svg" alt="">
+          <h1 class="text-white md:text-lg text-xl tracking-tighter uppercase" style="font-family: 'Roboto Condensed', sans-serif;">Copyright © 2024 <span class="text-[#FFF600]">Gorilla Science</span>. All Rights Reserved</h1>
           
         </div>
-        <div class="h-full w-[25%] flex items-center justify-around ">
-          <h1 class="text-white text-lg tracking-tighter uppercase" style="font-family: 'Roboto Condensed', sans-serif;">PRIVACY POLICY</h1>
-          <h1 class="text-white text-lg tracking-tighter uppercase" style="font-family: 'Roboto Condensed', sans-serif;">Web Design Agency</h1>
+        <div class="md:h-full ml-25 md:ml-0  md:w-[25%] w-[50%]  flex items-center justify-around ">
+          <h1 class="text-white md:text-lg text-xl tracking-tighter uppercase" style="font-family: 'Roboto Condensed', sans-serif;">PRIVACY POLICY</h1>
+          <h1 class="text-white md:text-lg text-xl tracking-tighter uppercase" style="font-family: 'Roboto Condensed', sans-serif;">Web Design Agency</h1>
 
          
         </div>
       </div>
+     
 
     </div>
 

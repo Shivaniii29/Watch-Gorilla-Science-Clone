@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="md:h-[100vh] h-[60vh] w-full flex">
+         <nav class="h-[100px] md:h-[120px] w-[100%] z-4 fixed absolute flex items-center justify-between overflow-x-hidden">
+      <div class="h-full w-[10%] flex items-center justify-center"><img  class="h-[90px] z-2" src="./Assets/logo.svg" alt=""></div>
+      <div class="h-full w-[64.5%] flex items-center justify-between">
+      <div class=" md:h-[35%] md:w-[44%] bg-black rounded-3xl shadow-lg shadow-white" style="box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
+-webkit-box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);
+-moz-box-shadow: 3px 3px 29px -9px rgba(255,255,255,0.75);">
+      <ul class="hidden md:flex items-center justify-center gap-6  md:gap-9 mt-[7px] cursor-pointer transition-transform duration-900" >
+      <li class="text-[#7B7B7B] font-black tracking-[-1.5px] text-[18px] cursor-pointer hover:text-[#FFE600]">WATCH</li>
+      <li  class="text-[#7B7B7B] font-black tracking-[-1.5px] text-[18px] cursor-pointer hover:text-[#FFE600]">ABOUT US</li>
+      <li  class="text-[#7B7B7B] font-black tracking-[-1.5px] text-[18px] cursor-pointer hover:text-[#FFE600]">CONTACT US</li></ul>
+      </div>   
+      <div class="hidden md:h-[45%] md:w-[43%] rounded-4xl md:flex mr-[20px]">
+        <div id="card" class="border cursor-pointer h-full w-[50%] rounded-l-4xl  flex items-center justify-center bg-[#03EF00] overflow-hidden  transition-transform duration-500  after:content-[''] after:position-absolute after:inset-0 after:bg-[rgba(0, 0, 0, 0.3)] after:z-1"><p id="cardText" class="font-black tracking-[-1.5px] text-[18px] cursor-pointer z-2">SUPPORT US </p> <img id="cardImage" class="transition-transform duration-500 h-[27px] ml-[7px]" src="./Assets/Image1.png" alt=""></div>
+         <div id="plusBox" class="cursor-pointer border h-full w-[50%] rounded-r-4xl font-black tracking-[-1.5px] text-[18px] flex items-center justify-center bg-[#FFF600] hover:w-[55%] transition-transform duration-500 hover:bg-white">
+          SUBSCRIBE <i id="plusIcon"  class="fa-solid fa-plus font-black ml-[5px] transition-transform duration-500 hover:rotate-340"></i></div>
+      </div>
+    </div>
+
+     <div class="md:hidden z-4 mr-5 bg-[#FFF600] flex items-center justify-end p-3 border rounded-full">
+    <button id="menu-btn" class="text-black text-4xl focus:outline-none">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+    </nav>
+
+    <div class="md:h-full h-[60vh] w-[50%] relative"><img class="h-full w-full object-cover" src="./Assets/bg-noise (1).jpg" alt="">
+    <div class="absolute md:top-38 top-19 left-5 h-[280px] md:w-[600px] w-[300px] flex flex-col items-start justify-between">
+        <h1 class="md:text-[53px] text-[40px] tracking-tighter font-black text-white">CONTACT <span class="text-[#FFE600]">US</span></h1>
+        <div class="md:h-[60px] h-[120px] flex flex-col items-start justify-between">
+          <h1 class="uppercase text-white" style="font-family: 'Roboto Condensed', sans-serif;">We need you. We need your criticism, your ideas and your help.</h1>
+          <h1 class="text-white uppercase tracking-tighter text-xs" style="font-family: 'Roboto Condensed', sans-serif;">(Oh yeah, and also some money, ahem)</h1>
+        </div>
+        <div>
+          <h1 class="bg-[#FFE600] w-11 h-5 text-black">EMAIL</h1>
+          <h1 class="text-white font-black text-lg">ContactGorillaScience@gmail.com</h1>
+        </div>
+    </div>
+    </div>
+     <div class="md:h-full h-[60vh] w-[50%]"><img class="h-full w-full object-cover" src="./Assets/contact-hero.jpg" alt=""></div>
+    </div>
+
+
+    <div class="md:h-[150vh] h-[190vh] w-full bg-black relative flex flex-col items-center justify-center">
+      <h1 class="text-[26px] absolute text-center md:top-16 top-12 font-black tracking-tighter text-white">GET IN <span class="text-[#FFE600]">TOUCH</span></h1>
+      <img class="absolute md:bottom-20 bottom-2 left-0 md:h-110 h-60 " src="./Assets/contact.png" alt="">
+      <div class="absolute md:top-130 top-270 z-2 inset-0 bg-black/50  md:h-115  md:w-85 h-60 w-46 z-[1]"></div>
+
+      <div>
+        <form class="grid grid-cols-1  md:w-[700px] w-[500px] md:grid-cols-2 gap-6 md:mt-5 mt-20px"  style="font-family: 'Roboto Condensed', sans-serif;">
+        <!-- Row: First name (left) / Email (right) -->
+        <div>
+          <label class="block text-md font-bold text-[#959595] ml-8 uppercase mb-2">First Name</label>
+          <input type="text" placeholder="" 
+                 class="w-full rounded-full h-17 bg-neutral-700/60 placeholder-neutral-400 text-white px-6 focus:outline-none focus:ring-2 focus:ring-yellow-400 soft-glow" />
+        </div>
+
+        <div>
+          <label class="flex items-center justify-between text-md text-[#959595] ml-8 font-bold  uppercase mb-2" style="font-family: 'Roboto Condensed', sans-serif;">
+            <span>Last Name</span>
+            
+          </label>
+          <input type="email" placeholder="" 
+                 class="w-full rounded-full h-17 bg-neutral-700/60 placeholder-neutral-400 text-white px-6 focus:outline-none focus:ring-2 focus:ring-yellow-400 soft-glow" />
+        </div>
+
+        <!-- Row: Phone / Subject -->
+        <div>
+          <label class="block font-bold text-md text-[#959595] ml-8 uppercase mb-2">Phone</label>
+          <input type="tel" placeholder="" 
+                 class="w-full rounded-full h-17 bg-neutral-700/60 placeholder-neutral-400 text-white px-6 focus:outline-none focus:ring-2 focus:ring-yellow-400 soft-glow" />
+        </div>
+
+        <div >
+          <label class="font-bold text-md text-[#959595] ml-8 uppercase mb-2 ">EMAIL</label>
+          <span class="text-xs font-black text-[#FF4300] uppercase"><i>(required)</i></span>
+          <!-- subject with bright yellow outline to match the photo -->
+          <input type="text" placeholder="" 
+                 class="w-full rounded-full h-17 bg-neutral-700/60 placeholder-neutral-400 text-white px-6 focus:outline-none focus:ring-2 focus:ring-yellow-300 soft-glow" />
+        </div>
+
+        <!-- Row: Company / (empty or additional input) -->
+        <div>
+          <label class="block font-bold text-md text-[#959595] ml-8 uppercase mb-2">Company</label>
+          <input type="text" placeholder="" 
+                 class="w-full rounded-full h-17 bg-neutral-700/60 placeholder-neutral-400 text-white px-6 focus:outline-none focus:ring-2 focus:ring-yellow-400 soft-glow" />
+        </div>
+
+         <div>
+          <label class="block font-bold text-md text-[#959595] ml-8 uppercase mb-2">SUBJECT</label>
+          <input type="text" placeholder="" 
+                 class="w-full rounded-full h-17 bg-neutral-700/60 placeholder-neutral-400 text-white px-6 focus:outline-none focus:ring-2 focus:ring-yellow-400 soft-glow" />
+        </div>
+
+        <!-- Message (full width) -->
+        <div class="md:col-span-2">
+          <label class="flex items-center  text-md text-[#959595] ml-8 font-bold uppercase mb-2">
+            <span>Message</span>
+            <span class="text-xs font-black text-[#FF4300]"><i>(required)</i></span>
+          </label>
+          <textarea rows="6" placeholder="" 
+                    class="w-full rounded-2xl bg-neutral-700/60 placeholder-neutral-400 text-white px-6 py-4 resize-none min-h-[160px] focus:outline-none focus:ring-2 focus:ring-yellow-400 soft-glow"></textarea>
+        </div>
+
+        <label class="flex items-center z-1 text-neutral-300 text-xs font-semibold  w-100">
+            <input type="checkbox" class="accent-yellow-400 mr-2 h-4 w-7 rounded" />
+            <span class="uppercase" style="font-family: 'Roboto Condensed', sans-serif;">By ticking this box you agree to our <span class="text-[#FFE600]">PRIVACY POLICY</span></span>
+          </label>
+
+        <!-- Submit area (full width) -->
+        <div class="md:col-span-2 flex justify-end">
+          <button type="submit" 
+                  class="px-8  py-4 font-black text-lg rounded-full bg-[#FFE600] text-neutral-900 font-black uppercase tracking-tighter hover:scale-[1.01] transform transition">
+            Send Message
+          </button>
+        </div>
+      </form>
+      </div>
+    </div>
+
+    <div class="md:hidden h-[30vh] relative">
+      <div class="absolute z-1 top-1 inset-0 bg-black/50 h-[30vh] w-full "></div>
+
+      <img class="relative" src="./Assets/bg-noise (1).jpg" alt="">
+      <img class="absolute z-2  top-12  h-42 md:left-130 left-50" src="./Assets/plug-416x1024.png" alt="">
+      <img class="absolute z-2  top-10 h-36 md:left-130 left-50" src="./Assets/unplug (1).svg" alt="">
+    </div>
+
+
+    <div class="md:h-[115vh] h-[53vh] w-[full] relative">
+      <video class=" object-cover h-full w-full " autoplay muted loop playsinline src="./Assets/footer.mp4"></video>
+      <!-- <img   class="block md:hidden object-cover h-full w-full" src="./Assets/bg-noise (1).jpg" alt=""> -->
+      
+      <div class="absolute inset-0 bg-black/20 md:h-[115vh] h-[53vh] w-full"></div>
+      <img class="md:block hidden absolute md:top-2 top-10 md:h-50 h-45 md:left-130 left-50" src="./Assets/plug-416x1024.png" alt="">
+      <img class="md:block hidden absolute md:top-2 top-10 h-45 md:left-130 left-50" src="./Assets/unplug (1).svg" alt="">
+      
+      <div class="h-[100px] w-full  absolute md:bottom-0 bottom-10 left-15 md:left-0 md:flex items-center justify-between ">
+        <div class="h-full md:w-[40%] w-[85%] flex items-center justify-evenly">
+          <img class="md:h-9 h-12" src="./Assets/logo.svg" alt="">
+          <h1 class="text-white md:text-lg text-lg tracking-tighter uppercase" style="font-family: 'Roboto Condensed', sans-serif;">Copyright © 2024 <span class="text-[#FFF600]">Gorilla Science</span>. All Rights Reserved</h1>
+          
+        </div>
+        <div class="md:h-full ml-23 md:ml-0  md:w-[25%] w-[60%]  flex items-center justify-around ">
+          <h1 class="text-white md:text-lg text-lg tracking-tighter uppercase" style="font-family: 'Roboto Condensed', sans-serif;">PRIVACY POLICY</h1>
+          <h1 class="text-white md:text-lg text-lg tracking-tighter uppercase" style="font-family: 'Roboto Condensed', sans-serif;">Web Design Agency</h1>
+
+         
+        </div>
+      </div>
+     
+
+    </div>
+</body>
+</html>
